@@ -1,0 +1,20 @@
+{
+  "name": "masonposch",
+  "version": "1.0.0",
+  "description": "an app for finding friends",
+  "main": "yes",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masonposch/week13-homework.git"
+  },
+  "author": "mason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masonposch/week13-homework/issues"
+  },
+  "homepage": "https://github.com/masonposch/week13-homework#readme"
+}
