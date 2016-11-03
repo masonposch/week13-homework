@@ -62,7 +62,7 @@ var friends = [
 
 //--------------------------------------------------------------------------------------------
 
-//ROUTING
+//GET ROUTING
 
 app.get("/", function(req, res){
 
@@ -76,6 +76,8 @@ app.get("/survey", function(req, res){
 	res.sendFile(path.join(__dirname, "survey.html"));
 
 });
+
+
 
 app.get('/friends', function(req, res){
 
@@ -101,6 +103,36 @@ app.get('/friends', function(req, res){
 
 // require("./app/routing/html-routes.js");
 // require("./app/routing/api-routes.js");
+
+
+//--------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------
+
+//POST ROUTING
+
+app.post('/survey', function(req, res){
+	var user = {
+		"name": req.body.name,
+		"photo": req.body.image.Link,
+		"score": [
+			req.body.question1.value,
+			req.body.question2.value,
+			req.body.question3.value,
+			req.body.question4.value,
+			req.body.question5.value,
+			req.body.question6.value,
+			req.body.question7.value,
+			req.body.question8.value,
+			req.body.question9.value,
+			req.body.question10.value,
+		]
+	}
+	console.log("User: " + user);
+  	res.end("yes");
+
+
+});
 
 
 //--------------------------------------------------------------------------------------------
