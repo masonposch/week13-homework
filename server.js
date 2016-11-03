@@ -17,67 +17,9 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 
 
-
-
-//--------------------------------------------------------------------------------------------
-
-
-var friends = [
-	
-	{
-	  "name":"Ahmed",
-	  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-	  "scores":[
-	     5,
-	     1,
-	     4,
-	     4,
-	     5,
-	     1,
-	     2,
-	     5,
-	     4,
-	     1
-	   ]
-	},
-	{
-	  "name":"Mason",
-	  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-	  "scores":[
-	     5,
-	     1,
-	     4,
-	     4,
-	     5,
-	     1,
-	     2,
-	     5,
-	     4,
-	     1
-	   ]
-	}
-
-];
-
-
 //--------------------------------------------------------------------------------------------
 
 //GET ROUTING
-
-app.get("/", function(req, res){
-
-	res.sendFile(path.join(__dirname, "home.html"));
-
-});
-
-
-app.get("/survey", function(req, res){
-
-	res.sendFile(path.join(__dirname, "survey.html"));
-
-});
-
-
 
 app.get('/friends', function(req, res){
 
@@ -98,6 +40,9 @@ app.get('/friends', function(req, res){
 	}
 
 });
+
+require("./app/routing/api-routes.js")(app);
+require("./app/routing/html-routes.js")(app);
 
 
 
