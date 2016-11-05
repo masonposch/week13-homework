@@ -232,24 +232,7 @@
 
 		console.log(user);
 
-		var currentURL = window.location.origin;
-
-		$.post(currentURL + "/api/friends", user, function(data){
-
-			$('#question1').val("");
-			$('#question2').val("");
-			$('#question3').val("");
-			$('#question4').val("");
-			$('#question5').val("");
-			$('#question6').val("");
-			$('#question7').val("");
-			$('#question8').val("");
-			$('#question9').val("");
-			$('#question10').val("");
-
-		});
-
-		return false;
+		module.exports = user;
 
 	});
 
